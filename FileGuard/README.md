@@ -9,7 +9,7 @@
 FileGuard turns a document (`confidential.pdf`) into a protected `confidential.fguard` package: AES-256-GCM encrypted,
 integrity-protected, and openable only through FileGuard by users the owner has authorised. Every open, denial, share,
 revocation and tamper detection is audited. A small Linux character-device driver (`/dev/fileguard`) receives security events
-from user space. Written for a 20-day capstone: C++17 application, C kernel module, SQLite, OpenSSL, Qt6 GUI + CLI.
+from user space.
 
 ## Problem statement
 Confidential files are emailed, copied and forwarded; the owner loses control. Once an unrestricted copy exists nobody can
@@ -161,9 +161,6 @@ are visible to same-user processes). Run unprivileged.
 ## Future enhancements
 Dedicated service daemon and multi-user store, key server for cross-machine sharing, hash-chained audit log, encrypted metadata, view-only watermarking,
 TOTP 2FA, signed module packaging.
-
-## Contributors
-Fill in team members and roles.
 
 ## License
 MIT for the application; GPL-2.0 for `driver/` (kernel requirement). See [`LICENSE`](LICENSE).
