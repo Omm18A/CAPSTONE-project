@@ -46,7 +46,7 @@ INTEGRITY_CHECK, INTEGRITY_FAILURE, ACCESS_DENIED, FILE_REVOKED, SECURITY_EVENT`
 `USER_STATUS_CHANGED`). Stored in SQLite and an append-only `audit.log`. Passwords, keys and plaintext are never logged
 (asserted in tests). No IP/host data is collected: FileGuard is a local application, so such fields would not be meaningful.
 
-## Known limitations (honest list)
+## Known limitations 
 1. **Same-account attacker**: the DB, master key and packages live in one user's data directory. Someone who controls that
    OS account (or root) can read the key, edit the DB, or delete the audit log. Defence in depth is against *other* OS
    users and against copied `.fguard` files, not against the account owner. A production design would run a dedicated
